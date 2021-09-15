@@ -2,6 +2,9 @@
   "name": "u10-hosting",
   "version": "0.1.0",
   "description": "",
+  "keywords": [],
+  "author": "Charles Allen",
+  "license": "UNLICENSED",
   "main": "index.js",
   "private": true,
   "workspaces": [
@@ -12,7 +15,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "yarn build && firebase deploy --only functions,hosting"
   },
-  "keywords": [],
-  "author": "Charles Allen",
-  "license": "UNLICENSED"
+  "nohoist": [
+    "**/@vue/cli-plugin-eslint",
+    "**/@vue/cli-plugin-eslint/**"
+  ]
 }
