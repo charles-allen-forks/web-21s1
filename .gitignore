@@ -1,9 +1,15 @@
 # Secrets
 firebase-config*.json
+firebase-config*.js
+firebase-config*.ts
 service-account*.json
+service-account*.js
+service-account*.ts
 
 # Deps
 node_modules
+dist
+lib
 
 # Logs
 *.log
