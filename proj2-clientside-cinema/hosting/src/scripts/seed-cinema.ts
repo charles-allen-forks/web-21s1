@@ -79,7 +79,7 @@ const cinemasBySlug = keyBy(cinemas, 'slug')
 const filmsBySlug = keyBy(films, 'slug')
 const layoutsByName = keyBy(layouts, 'layout')
 
-const getTimeString = (dateMillis: number) => {
+const getTimeString = (dateMillis: number): string => {
   const date = new Date(dateMillis)
   const formatter = new Intl.DateTimeFormat('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Bangkok' })
   return formatter.format(date)
@@ -96,7 +96,7 @@ const screenings = screeningsRaw
   }))
   .map(screening => ({ ...screening, slug: `${screening.cinemaSlug},${screening.screen},${screening.date.seconds}` }))
 
-const main = async () => {
+const main = async (): Promise<void> => {
   const batch = db.batch()
 
   cinemas.forEach(cinema => batch.set(db.collection('cinemas').doc(cinema.slug), cinema, { merge: true }))
@@ -106,7 +106,7 @@ const main = async () => {
   await batch.commit()
   console.log(`Saved:\n- ${cinemas.length} cinemas\n- ${films.length} films\n- ${screenings.length} screenings`)
 
-  const p = process as { exit(code: number): void}
+  const p = process as { exit: (code: number) => void}
   p.exit(0)
 }
 
