@@ -4,7 +4,10 @@
       My Tickets
     </h1>
 
-    <div class="ticket-list">
+    <div
+      v-if="$store.state.tickets"
+      class="ticket-list"
+    >
       <div
         v-for="ticket in $store.state.tickets"
         :key="ticket.id"
@@ -24,11 +27,11 @@
         </div>
         <div class="ticket-seats is-size-3">
           <span v-if="ticket.seats.length > 6">
-            {{ ticket.seats.sort().slice(0, 4).join(' ') }}
+            {{ ticket.seats.slice(0, 4).join(' ') }}
             +{{ ticket.seats.length - 4 }}
           </span>
           <span v-else>
-            {{ ticket.seats.sort().join(' ') }}
+            {{ ticket.seats.join(' ') }}
           </span>
         </div>
       </div>
@@ -41,8 +44,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component
-export default class Tickets extends Vue {
-}
+export default class Tickets extends Vue { }
 </script>
 
 <style lang="scss" scoped>
