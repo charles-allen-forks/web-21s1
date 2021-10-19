@@ -2,14 +2,14 @@
   <div class="page-athlete-details">
     <div v-if="athlete" class="section">
       <p class="title is-2">{{ athlete.name }}</p>
-      <img :src="`/images/athletes/${athlete.slug}.jpg`" alt="athlete.name" />
-      <p class="mt-4">
+      <p>
         Age:
         <span class="has-text-weight-bold">{{ athlete.age }}</span>
         <br />
         Gender:
         <span class="has-text-weight-bold">{{ athlete.gender }}</span>
       </p>
+      <img :src="`/images/athletes/${athlete.slug}.jpg`" alt="athlete.name" class="mt-4" />
     </div>
     <div v-else class="section">
       <p class="title is-2">Athlete not found</p>

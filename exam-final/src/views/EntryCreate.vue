@@ -13,17 +13,12 @@
             <b-input v-model="name" />
           </b-field>
 
-          <b-field label="Team Slug" label-position="on-border">
-            <b-input v-model="teamSlug" />
+          <b-field label="PB 100" label-position="on-border">
+            <b-input v-model="pb100" />
           </b-field>
 
-          <b-field label="Team" label-position="on-border">
-            <b-input v-model="team" />
-          </b-field>
-        </div>
-        <div class="column">
-          <b-field label="Lane" label-position="on-border">
-            <b-input v-model.number="lane" type="number" />
+          <b-field label="PB 200" label-position="on-border">
+            <b-input v-model="pb200" />
           </b-field>
 
           <b-field label="SB 100" label-position="on-border">
@@ -33,13 +28,18 @@
           <b-field label="SB 200" label-position="on-border">
             <b-input v-model="sb200" />
           </b-field>
-
-          <b-field label="PB 100" label-position="on-border">
-            <b-input v-model="pb100" />
+        </div>
+        <div class="column">
+          <b-field label="Lane" label-position="on-border">
+            <b-input v-model.number="lane" type="number" />
           </b-field>
 
-          <b-field label="PB 200" label-position="on-border">
-            <b-input v-model="pb200" />
+          <b-field label="Team Slug" label-position="on-border">
+            <b-input v-model="teamSlug" />
+          </b-field>
+
+          <b-field label="Team" label-position="on-border">
+            <b-input v-model="team" />
           </b-field>
         </div>
       </div>

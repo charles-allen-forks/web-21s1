@@ -5,10 +5,6 @@
 
       <div class="columns">
         <div class="column">
-          <b-field label="Order" label-position="on-border">
-            <b-input v-model.number="order" type="number" />
-          </b-field>
-
           <b-field label="Slug" label-position="on-border">
             <b-input v-model="slug" />
           </b-field>
@@ -20,22 +16,26 @@
           <b-field label="Team Slug" label-position="on-border">
             <b-input v-model="teamSlug" />
           </b-field>
+
+          <b-field label="Order" label-position="on-border">
+            <b-input v-model.number="order" type="number" />
+          </b-field>
         </div>
         <div class="column">
-          <b-field label="Rank" label-position="on-border">
-            <b-input v-model.number="rank" type="number" />
-          </b-field>
-
-          <b-field label="Record" label-position="on-border">
-            <b-input v-model="record" />
+          <b-field label="Attempts" label-position="on-border">
+            <b-input v-model="attempts" />
           </b-field>
 
           <b-field label="Distance" label-position="on-border">
             <b-input v-model="distance" />
           </b-field>
 
-          <b-field label="Attempts" label-position="on-border">
-            <b-input v-model="attempts" />
+          <b-field label="Rank" label-position="on-border">
+            <b-input v-model.number="rank" type="number" />
+          </b-field>
+
+          <b-field label="Record" label-position="on-border">
+            <b-input v-model="record" />
           </b-field>
         </div>
       </div>

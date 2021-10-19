@@ -4,7 +4,7 @@
       <p class="title is-2">Athletes</p>
       <ul>
         <li v-for="athlete in athletes" :key="athlete.slug">
-          <router-link :to="{ name: 'AthleteDetails', params: { athleteSlug: athlete.slug } }">{{ athlete.name }} ({{ athlete.team }})</router-link>
+          <router-link :to="{ name: 'AthleteDetails', params: { athleteSlug: athlete.slug } }">{{ athlete.team }} - {{ athlete.name }}</router-link>
         </li>
       </ul>
     </div>
@@ -19,7 +19,7 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class AthleteList extends Vue {
   get athletes (): Athlete[] {
     return this.$store.state.athletes
-      .sort((a: Athlete, b: Athlete) => a.name.localeCompare(b.name))
+      .sort((a: Athlete, b: Athlete) => a.team.localeCompare(b.team))
   }
 }
 </script>

@@ -9,19 +9,6 @@
             <b-input v-model="slug" />
           </b-field>
 
-          <b-field label="Name" label-position="on-border">
-            <b-input v-model="name" />
-          </b-field>
-
-          <b-field label="Rank" label-position="on-border">
-            <b-input v-model.number="rank" type="number" />
-          </b-field>
-
-          <b-field label="Introduction" label-position="on-border">
-            <b-input type="textarea" v-model="introduction" />
-          </b-field>
-        </div>
-        <div class="column py-2">
           <b-field label="1st-place medals" label-position="on-border">
             <b-input v-model.number="countFirst" type="number" />
           </b-field>
@@ -36,6 +23,19 @@
 
           <b-field label="Total medals" label-position="on-border">
             <b-input v-model.number="countTotal" type="number" />
+          </b-field>
+        </div>
+        <div class="column py-2">
+          <b-field label="Name" label-position="on-border">
+            <b-input v-model="name" />
+          </b-field>
+
+          <b-field label="Rank" label-position="on-border">
+            <b-input v-model.number="rank" type="number" />
+          </b-field>
+
+          <b-field label="Introduction" label-position="on-border">
+            <b-input type="textarea" v-model="introduction" />
           </b-field>
         </div>
       </div>

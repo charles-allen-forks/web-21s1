@@ -5,8 +5,8 @@
       <ul>
         <li v-for="team in teams" :key="team.slug">
           <router-link :to="{ name: 'TeamDetails', params: { teamSlug: team.slug } }">
-            <img :src="`/images/teams/${team.slug}.png`" alt="team.name" style="height: 16px" />
-            <span class="ml-2">{{ team.name }}</span>
+            <span>{{ team.name }}</span>
+            <img :src="`/images/teams/${team.slug}.png`" alt="team.name" class="ml-2" style="height: 16px" />
           </router-link>
         </li>
       </ul>

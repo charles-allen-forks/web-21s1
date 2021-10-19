@@ -16,6 +16,13 @@
           <b-field label="Age" label-position="on-border">
             <b-input v-model.number="age" type="number" />
           </b-field>
+
+          <b-field label="Gender" label-position="on-border">
+            <b-select v-model="gender" expanded>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </b-select>
+          </b-field>
         </div>
         <div class="column py-2">
           <b-field label="Team Slug" label-position="on-border">
@@ -24,13 +31,6 @@
 
           <b-field label="Team Name" label-position="on-border">
             <b-input v-model="team" />
-          </b-field>
-
-          <b-field label="Gender" label-position="on-border">
-            <b-select v-model="gender" expanded>
-              <option value="Female">Female</option>
-              <option value="Male">Male</option>
-            </b-select>
           </b-field>
         </div>
       </div>

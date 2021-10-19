@@ -4,10 +4,10 @@
       <p class="title is-2">Entries</p>
       <ul>
         <li v-for="entry in entries" :key="entry.slug">
-          <span>L{{ entry.lane }}:</span>
+          <span>[{{ entry.lane }}]</span>
           <router-link :to="{ name: 'EntryDetails', params: { entrySlug: entry.slug } }">
-            <img :src="`/images/teams/${entry.teamSlug}.png`" alt="entry.team" class="ml-2" style="height: 16px" />
             <span class="ml-2">{{ entry.name }}</span>
+            <img :src="`/images/teams/${entry.teamSlug}.png`" alt="entry.team" class="ml-2" style="height: 16px" />
           </router-link>
         </li>
       </ul>

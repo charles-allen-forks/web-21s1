@@ -5,8 +5,8 @@
       <ul>
         <li v-for="sport in sports" :key="sport.slug">
           <router-link :to="{ name: 'SportDetails', params: { sportSlug: sport.slug } }">
-            <img :src="`/images/sports/${sport.slug}.png`" alt="sport.name" style="height: 24px" />
-            <span class="ml-2">{{ sport.name }}</span>
+            <span>{{ sport.name }}</span>
+            <img :src="`/images/sports/${sport.slug}.png`" alt="sport.name" class="ml-2" style="height: 24px" />
           </router-link>
         </li>
       </ul>

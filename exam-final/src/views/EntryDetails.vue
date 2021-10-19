@@ -2,17 +2,17 @@
   <div class="page-entry-details">
     <div v-if="entry" class="section">
       <p class="title is-2">{{ entry.name }}</p>
-      <p class="subtitle mt-4 mb-2">Season Best (SB)</p>
-      <p>
-        100m in {{ entry.sb100 }}
-        <br />
-        200m in {{ entry.sb200 }}
-      </p>
       <p class="subtitle mt-4 mb-2">Personal Best (PB)</p>
       <p>
-        100m in {{ entry.pb100 }}
-        <br />
         200m in {{ entry.pb200 }}
+        <br />
+        100m in {{ entry.pb100 }}
+      </p>
+      <p class="subtitle mt-4 mb-2">Season Best (SB)</p>
+      <p>
+        200m in {{ entry.sb200 }}
+        <br />
+        100m in {{ entry.sb100 }}
       </p>
     </div>
     <div v-else class="section">
