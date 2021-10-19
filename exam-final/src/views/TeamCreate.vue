@@ -14,7 +14,7 @@
           </b-field>
 
           <b-field label="Rank" label-position="on-border">
-            <b-input v-model.number="rank" />
+            <b-input v-model.number="rank" type="number" />
           </b-field>
 
           <b-field label="Introduction" label-position="on-border">
@@ -23,26 +23,24 @@
         </div>
         <div class="column py-2">
           <b-field label="1st-place medals" label-position="on-border">
-            <b-input v-model.number="countFirst" />
+            <b-input v-model.number="countFirst" type="number" />
           </b-field>
 
           <b-field label="2nd-place medals" label-position="on-border">
-            <b-input v-model.number="countSecond" />
+            <b-input v-model.number="countSecond" type="number" />
           </b-field>
 
           <b-field label="3rd-place medals" label-position="on-border">
-            <b-input v-model.number="countThird" />
+            <b-input v-model.number="countThird" type="number" />
           </b-field>
 
           <b-field label="Total medals" label-position="on-border">
-            <b-input v-model.number="countTotal" />
+            <b-input v-model.number="countTotal" type="number" />
           </b-field>
         </div>
       </div>
 
-      <b-button @click="save" type="is-primary" size="is-large" expanded>
-        Save Team
-      </b-button>
+      <b-button @click="save" type="is-primary" size="is-large" expanded>Save Team</b-button>
     </div>
   </div>
 </template>

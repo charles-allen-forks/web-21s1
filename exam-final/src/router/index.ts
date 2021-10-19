@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '@/views/Home.vue'
+import AthleteList from '@/views/AthleteList.vue'
+import AthleteDetails from '@/views/AthleteDetails.vue'
+import AthleteCreate from '@/views/AthleteCreate.vue'
 import TeamList from '@/views/TeamList.vue'
 import TeamDetails from '@/views/TeamDetails.vue'
 import TeamCreate from '@/views/TeamCreate.vue'
@@ -12,6 +15,21 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/athletes',
+    name: 'AthleteList',
+    component: AthleteList
+  },
+  {
+    path: '/athletes/new',
+    name: 'AthleteCreate',
+    component: AthleteCreate
+  },
+  {
+    path: '/athletes/:athleteSlug',
+    name: 'AthleteDetails',
+    component: AthleteDetails
   },
   {
     path: '/teams',
