@@ -1,5 +1,5 @@
 <template>
-  <div class="page-team-list">
+  <div class="page-athlete-list">
     <div class="section">
       <p class="title is-2">Athletes</p>
       <ul>

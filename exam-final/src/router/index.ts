@@ -4,6 +4,9 @@ import Home from '@/views/Home.vue'
 import AthleteList from '@/views/AthleteList.vue'
 import AthleteDetails from '@/views/AthleteDetails.vue'
 import AthleteCreate from '@/views/AthleteCreate.vue'
+import SportList from '@/views/SportList.vue'
+import SportDetails from '@/views/SportDetails.vue'
+import SportCreate from '@/views/SportCreate.vue'
 import TeamList from '@/views/TeamList.vue'
 import TeamDetails from '@/views/TeamDetails.vue'
 import TeamCreate from '@/views/TeamCreate.vue'
@@ -30,6 +33,21 @@ const routes: Array<RouteConfig> = [
     path: '/athletes/:athleteSlug',
     name: 'AthleteDetails',
     component: AthleteDetails
+  },
+  {
+    path: '/sports',
+    name: 'SportList',
+    component: SportList
+  },
+  {
+    path: '/sports/new',
+    name: 'SportCreate',
+    component: SportCreate
+  },
+  {
+    path: '/sports/:sportSlug',
+    name: 'SportDetails',
+    component: SportDetails
   },
   {
     path: '/teams',

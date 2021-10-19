@@ -4,9 +4,11 @@
       <p class="title is-2">{{ athlete.name }}</p>
       <img :src="`/images/athletes/${athlete.slug}.jpg`" alt="athlete.name" />
       <p class="mt-4">
-        Age: {{ athlete.age }}
+        Age:
+        <span class="has-text-weight-bold">{{ athlete.age }}</span>
         <br />
-        Gender: {{ athlete.gender }}
+        Gender:
+        <span class="has-text-weight-bold">{{ athlete.gender }}</span>
       </p>
     </div>
     <div v-else class="section">

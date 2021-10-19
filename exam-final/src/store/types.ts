@@ -7,6 +7,13 @@ export interface Athlete {
   gender: string
 }
 
+export interface Sport {
+  slug: string
+  name: string
+  eventCount: number
+  description: string
+}
+
 export interface Team {
   slug: string
   rank: number

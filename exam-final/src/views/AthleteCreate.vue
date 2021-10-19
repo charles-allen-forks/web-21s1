@@ -1,5 +1,5 @@
 <template>
-  <div class="page-team-create">
+  <div class="page-athlete-create">
     <div class="section">
       <p class="title is-2">Create Team</p>
 
