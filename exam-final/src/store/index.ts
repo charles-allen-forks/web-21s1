@@ -14,7 +14,8 @@ const { teams, athletes, sports, events, heats, competitors, records, results, a
 export default new Vuex.Store<OlympicsStore>({
   state: { teams },
   getters: {
-    teamsBySlug: (state) => keyBy(state.teams, 'slug')
+    teamsBySlug: (state) => keyBy(state.teams, 'slug'),
+    teamsById: (_, getters) => getters.teamsBySlug // alias
   },
   mutations: {
     'teams/push': (state, team: Team) => {
