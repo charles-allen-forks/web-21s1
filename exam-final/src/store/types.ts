@@ -19,6 +19,17 @@ export interface Entry {
   sb200: string
 }
 
+export interface Result {
+  slug: string
+  name: string
+  teamSlug: string
+  order: number
+  rank: number
+  distance: string
+  record: string
+  attempts: string
+}
+
 export interface Sport {
   slug: string
   name: string

@@ -7,6 +7,9 @@ import AthleteCreate from '@/views/AthleteCreate.vue'
 import EntryList from '@/views/EntryList.vue'
 import EntryDetails from '@/views/EntryDetails.vue'
 import EntryCreate from '@/views/EntryCreate.vue'
+import ResultList from '@/views/ResultList.vue'
+import ResultDetails from '@/views/ResultDetails.vue'
+import ResultCreate from '@/views/ResultCreate.vue'
 import SportList from '@/views/SportList.vue'
 import SportDetails from '@/views/SportDetails.vue'
 import SportCreate from '@/views/SportCreate.vue'
@@ -51,6 +54,21 @@ const routes: Array<RouteConfig> = [
     path: '/entries/:entrySlug',
     name: 'EntryDetails',
     component: EntryDetails
+  },
+  {
+    path: '/results',
+    name: 'ResultList',
+    component: ResultList
+  },
+  {
+    path: '/results/new',
+    name: 'ResultCreate',
+    component: ResultCreate
+  },
+  {
+    path: '/results/:resultSlug',
+    name: 'ResultDetails',
+    component: ResultDetails
   },
   {
     path: '/sports',

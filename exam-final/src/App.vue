@@ -14,6 +14,9 @@
         <b-navbar-item tag="router-link" :to="{ name: 'EntryDetails', params: { entrySlug: 'elaine-thompson-herah' } }">Entry: Elaine</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'EntryList' }">Entries</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'EntryCreate' }">Create Entry</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'ResultDetails', params: { resultSlug: 'brandon-starc' } }">Result: Brandon</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'ResultList' }">Results</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'ResultCreate' }">Create Result</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'SportDetails', params: { sportSlug: 'sprinting' } }">Sport: Sprinting</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'SportList' }">Sports</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'SportCreate' }">Create Sport</b-navbar-item>
