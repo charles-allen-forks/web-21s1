@@ -1,3 +1,4 @@
+import { keyBy } from 'lodash'
 
 const teams = [
   { slug: 'usa', rank: 1, name: 'United States of America', countFirst: 39, countSecond: 41, countThird: 33, countTotal: 113, introduction: 'They get a lot of medals. Michael Phelps is really good at swimming. Katie Ledecky too! Carl Lewis was a pretty great runner.' },
@@ -137,7 +138,6 @@ const competitors = [
   { heatSlug: 'f100m-f', slug: 'shelly-ann-fraser-pryce', name: 'Shelly-Ann Fraser-Pryce', teamSlug: 'jamaica', lane: 5 },
   { heatSlug: 'f100m-f', slug: 'shericka-jackson', name: 'Shericka Jackson', teamSlug: 'jamaica', lane: 7 },
   { heatSlug: 'f100m-f', slug: 'marie-josee-ta-lou', name: 'Marie-Josee Ta Lou', teamSlug: 'other', lane: 6 },
-  { heatSlug: 'f100m-f', slug: 'ajla-del-ponte', name: 'Ajla del Ponte', teamSlug: 'other', lane: 8 },
   { heatSlug: 'f100m-f', slug: 'mujinga-kambundji', name: 'Mujinga Kambundji', teamSlug: 'other', lane: 9 },
   { heatSlug: 'f100m-f', slug: 'teahna-daniels', name: 'Teahna Daniels', teamSlug: 'usa', lane: 3 },
   { heatSlug: 'f100m-f', slug: 'daryll-neita', name: 'Daryll Neita', teamSlug: 'great-britain', lane: 2 }
@@ -152,6 +152,12 @@ const records = [
   { slug: 'teahna-daniels', name: 'Teahna Daniels', pb100: '10.84', pb200: '22.51', sb100: '10.84', sb200: '22.54' },
   { slug: 'daryll-neita', name: 'Daryll Neita', pb100: '10.96', pb200: '23.06', sb100: '10.96', sb200: '23.06' }
 ]
+
+const teamsBySlug = keyBy(teams, 'slug')
+const recordsBySlug = keyBy(records, 'slug')
+const entries = competitors
+  .filter(c => c.heatSlug === 'f100m-f')
+  .map(({ slug, teamSlug, lane }) => ({ teamSlug, lane, ...recordsBySlug[slug], team: teamsBySlug[teamSlug]?.name ?? 'Other' }))
 
 const results = [
   { slug: 'mutaz-essa-barshim', name: 'Mutaz Essa Barshim', teamSlug: 'qat', rank: 1, order: 1, distance: '2.37', record: 'SB' },
@@ -260,5 +266,8 @@ const worldRecords = [
 ]
 
 export const fakeData = {
-  teams, athletes, sports, events, heats, competitors, records, results, attempts, worldRecords
+  teams,
+  athletes,
+  sports,
+  entries
 }
